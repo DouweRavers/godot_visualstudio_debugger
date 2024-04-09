@@ -1,0 +1,19 @@
+
+{
+  "profiles": {
+	"Godot Debug": {
+	  "commandName": "Executable",
+	  "executablePath": "$EDITOR$",
+	  "commandLineArgs": "--path . --verbose",
+	  "workingDirectory": ".",
+	  "nativeDebugging": true
+	},
+	"Godot Debug $NAME$": {
+	  "commandName": "Executable",
+	  "executablePath": "$EDITOR$",
+	  "commandLineArgs": "--upwards $PATH$ --verbose",
+	  "workingDirectory": ".",
+	  "nativeDebugging": true
+	}
+  }
+}
