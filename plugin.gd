@@ -1,17 +1,24 @@
 @tool
 extends EditorPlugin
 
+var attach_button_packedscene := preload("res://addons/douwco.visualstudio22_debug_profiles/attach_to_vs22/attach_button.tscn")
+var attach_button:Node
+
 func _notification(what):
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
-		regenerate_launch_profile()
+		Douwco_ProfileGenerator.regenerate()
 
-func regenerate_launch_profile():
-	var active_scene:Node = EditorInterface.get_edited_scene_root()
-	var name = active_scene.name
-	var scene_path = active_scene.scene_file_path.replace("res://", "./")
-	var editor_path = OS.get_executable_path();
-	var base_profile = FileAccess.open("res://addons/douwco.visualstudio22_debug_profiles/launchSettingsBase.json", FileAccess.READ).get_as_text()
-	var profile = base_profile.replace("$EDITOR$", editor_path).replace("$NAME$", name).replace("$PATH$", scene_path)
-	if(not DirAccess.dir_exists_absolute("res://Properties/")): DirAccess.make_dir_recursive_absolute("res://Properties/")
-	var file = FileAccess.open("res://Properties/launchSettings.json", FileAccess.WRITE)
-	file.store_string(profile)
+func _enter_tree():
+	attach_button = attach_button_packedscene.instantiate()
+	attach_button.plugin = self
+	add_control_to_container(CONTAINER_TOOLBAR, attach_button)
+	attach_button.get_parent().move_child(attach_button, -2)
+
+func _exit_tree():
+	attach_button.queue_free()
+
+func enable_connect(enable: bool):
+	if enable:
+		add_autoload_singleton("attach", "res://addons/douwco.visualstudio22_debug_profiles/attach_to_vs22/attach_singleton.gd")
+	else:
+		remove_autoload_singleton("attach")
