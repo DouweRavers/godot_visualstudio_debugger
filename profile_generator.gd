@@ -7,7 +7,7 @@ static func regenerate():
 	var scene_path = edited_scene.scene_file_path.replace("res://", "./")
 	var editor_path = OS.get_executable_path();
 	# base profile
-	var base_profile = FileAccess.open("res://addons/douwco.visualstudio22_debug_profiles/launchSettingsBase.json", FileAccess.READ).get_as_text()
+	var base_profile = FileAccess.open("res://addons/godot_visualstudio_debugger/launchSettingsBase.json", FileAccess.READ).get_as_text()
 	# generate profile
 	var profile = base_profile.replace("$EDITOR$", editor_path).replace("$NAME$", name).replace("$PATH$", scene_path)
 	# save to Properties folder

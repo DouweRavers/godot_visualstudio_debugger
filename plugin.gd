@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-var attach_button_packedscene := preload("res://addons/douwco.visualstudio22_debug_profiles/attach_to_vs22/attach_button.tscn")
+var attach_button_packedscene := preload("res://addons/godot_visualstudio_debugger/attach_to_vs22/attach_button.tscn")
 var attach_button:Node
 
 func _notification(what):
@@ -19,6 +19,6 @@ func _exit_tree():
 
 func enable_connect(enable: bool):
 	if enable:
-		add_autoload_singleton("attach", "res://addons/douwco.visualstudio22_debug_profiles/attach_to_vs22/attach_singleton.gd")
+		add_autoload_singleton("attach", "res://addons/godot_visualstudio_debugger/attach_to_vs22/attach_singleton.gd")
 	else:
 		remove_autoload_singleton("attach")

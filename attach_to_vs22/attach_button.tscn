@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dki0ohu71514p"]
+[gd_scene load_steps=3 format=3 uid="uid://biob8l1rtm0pp"]
 
-[ext_resource type="Texture2D" uid="uid://dwbd2r5bsocli" path="res://addons/douwco.visualstudio22_debug_profiles/attach_to_vs22/attach_icon.svg" id="1_1v2dt"]
-[ext_resource type="Script" path="res://addons/douwco.visualstudio22_debug_profiles/attach_to_vs22/attach_button.gd" id="2_553ri"]
+[ext_resource type="Texture2D" uid="uid://dwbd2r5bsocli" path="res://addons/godot_visualstudio_debugger/attach_to_vs22/attach_icon.svg" id="1_1v2dt"]
+
+[sub_resource type="GDScript" id="GDScript_ms3a2"]
+script/source = "@tool
+extends Button
+
+var plugin:EditorPlugin
+
+func _on_toggled(toggled_on):
+	plugin.enable_connect(toggled_on)
+"
 
 [node name="Vs22ConnectButton" type="Button"]
 custom_minimum_size = Vector2(32, 32)
@@ -12,6 +21,6 @@ toggle_mode = true
 icon = ExtResource("1_1v2dt")
 flat = true
 expand_icon = true
-script = ExtResource("2_553ri")
+script = SubResource("GDScript_ms3a2")
 
 [connection signal="toggled" from="." to="." method="_on_toggled"]
