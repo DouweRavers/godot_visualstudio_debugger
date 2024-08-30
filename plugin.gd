@@ -1,7 +1,7 @@
 @tool
 class_name VSD_Plugin extends EditorPlugin
 
-const launchfile_path := "res://addons/godot-visualstudio-debugger/launchSettingsBase.json"
+const launchfile_path := "res://addons/godot_visualstudio_debugger/launchSettingsBase.json"
 
 func _notification(what):
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
