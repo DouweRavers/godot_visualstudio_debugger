@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{2A8D3533-288F-4BA5-8E06-79850A3A3B84}|godot_visualstudio_debugger.csproj|solutionrelative:scenes\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\godot_visualstudio_debugger\\scenes\\Control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\Control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A8D3533-288F-4BA5-8E06-79850A3A3B84}|godot_visualstudio_debugger.csproj|d:\\projects\\godot_visualstudio_debugger\\scenes\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A8D3533-288F-4BA5-8E06-79850A3A3B84}|godot_visualstudio_debugger.csproj|solutionrelative:scenes\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +30,7 @@
               "RelativeToolTip": "scenes\\Control.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T13:29:00.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T13:29:00.911Z"
             },
             {
               "$type": "Document",
@@ -41,7 +40,7 @@
               "RelativeDocumentMoniker": "scenes\\Main.cs",
               "ToolTip": "D:\\Projects\\godot_visualstudio_debugger\\scenes\\Main.cs",
               "RelativeToolTip": "scenes\\Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T07:18:24.185Z",
               "EditorCaption": ""

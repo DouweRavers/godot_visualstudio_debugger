@@ -1,0 +1,17 @@
+[configuration]
+
+entry_symbol = "vs_debugger_library_init"
+compatibility_minimum = "4.3"
+reloadable = true
+
+[libraries]
+
+macos.editor = "res://addons/godot_visualstudio_debugger/bin/libvsdb.macos.editor.framework"
+ios.editor = "res://addons/godot_visualstudio_debugger/bin/libvsdb.ios.editor.xcframework"
+windows.editor.x86_32 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.windows.editor.x86_32.dll"
+windows.editor.x86_64 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.windows.editor.x86_64.dll"
+linux.editor.x86_64 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.linux.editor.x86_64.so"
+linux.editor.arm64 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.linux.editor.arm64.so"
+linux.editor.rv64 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.linux.editor.rv64.so"
+android.editor.x86_64 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.android.editor.x86_64.so"
+android.editor.arm64 = "res://addons/godot_visualstudio_debugger/bin/libvsdb.android.editor.arm64.so"
