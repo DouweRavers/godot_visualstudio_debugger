@@ -1,4 +1,5 @@
-# douwco.visualstudio22_debug_profiles
+# visualstudio debugger
+
 This plugin enables the use of the Visual Studio Debugger for Godot .NET projects.
 
 In Visual Studio, you have two options: 
