@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://biob8l1rtm0pp"]
+
+[ext_resource type="Texture2D" uid="uid://dwbd2r5bsocli" path="res://addons/godot_visualstudio_debugger/attach_icon.svg" id="1_1v2dt"]
+[ext_resource type="Script" path="res://addons/godot_visualstudio_debugger/attach_button.gd" id="2_kgvsa"]
+
+[node name="AttachButton" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.803922, 0.807843, 0.807843, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.737255, 0.988235, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+toggle_mode = true
+icon = ExtResource("1_1v2dt")
+flat = true
+expand_icon = true
+script = ExtResource("2_kgvsa")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

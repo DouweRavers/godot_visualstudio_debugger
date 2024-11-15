@@ -1,3 +1,0 @@
-[submodule "addons/godot_visualstudio_debugger/godot-cpp"]
-	path = vs_debugger_gdextension_cpp/godot_cpp
-	url = git@github.com:godotengine/godot-cpp.git

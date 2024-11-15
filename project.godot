@@ -14,6 +14,10 @@ config/name="godot_visualstudio_debugger"
 config/features=PackedStringArray("4.3", "C#")
 config/icon="res://icon.svg"
 
+[autoload]
+
+attach="*res://addons/godot_visualstudio_debugger/attach_singleton.gd"
+
 [dotnet]
 
 project/assembly_name="godot_visualstudio_debugger"
