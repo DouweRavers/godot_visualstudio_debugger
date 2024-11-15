@@ -1,30 +1,9 @@
 @tool
 extends EditorPlugin
 
-var attach_button:Node
-
 func _notification(what):
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
 		generate_launchsettings_file()
-
-func _enter_tree():
-	var play_project_button := search_play_project_button(EditorInterface.get_base_control())
-	var attach_button_packedscene := preload("res://addons/godot_visualstudio_debugger/attach_button.tscn")
-	attach_button = attach_button_packedscene.instantiate()
-	play_project_button.add_sibling(attach_button)
-	play_project_button.get_parent().move_child(attach_button,0)
-
-func _exit_tree():
-	attach_button.queue_free()
-
-func search_play_project_button(node:Node)->Button:
-	if node is Button and (node as Button).tooltip_text == "Play the project.":
-		return (node as Button)
-	for child in node.get_children():
-		var button := search_play_project_button(child)
-		if button is Button:
-			return button as Button
-	return null
 
 func generate_launchsettings_file():
 	var edited_scene:Node = EditorInterface.get_edited_scene_root()
