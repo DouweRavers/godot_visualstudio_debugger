@@ -11,7 +11,6 @@ public partial class Control : Godot.Control
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		int value = 5;
-		value += 10;
+		int foo = 1;
 	}
 }
